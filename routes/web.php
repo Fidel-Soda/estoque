@@ -8,4 +8,4 @@ Route::get('/', function () {
 });
 Route::get('/produto', [ProdutoController::class, 'lista'])->name('produtos.lista');
 
-Route::get('/produto/detalhes/{id}', [ProdutoController::class, 'detalhes'])->name('produtos.detalhes');
+Route::get('/produto/detalhes/{id}', [ProdutoController::class, 'detalhes'])->name('produtos.detalhes')->where('id','[0-9]+');
